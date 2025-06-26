@@ -22,15 +22,47 @@ The frontend of the app provies a clean UI/UX for user interaction, combined wit
 
 **The big question of course is, how does the app work? And what code currently runs and how?**
 **Frontend**
+The frontend of DunnSense is built using FlutterFlow, providing an intuitive and emotionally-aware user journey from onboarding to behavior-aware insights. Below is a breakdwon of the user interface per page (here, page represent the individual pages the user go through during their User Experience (UX)) and how the app currenlty works:
 
+Loging and onboarding (page: login)
+On first launch, the user lands on the authentication screen. Here options include, create a new account via email + password + confirmation, continue seamlessly with Google sign-in, and existing users can log in directly. This ensures a secure and scalable onboarding process.
 
+Home screen (page: initial)
+After logging in, users arrive on the home dashboard, which displays:
+1. Current financial snapshot: total expenses this month, remaining balance, total income logged
+2. Latest transaction with amount, data and mood associated.
+Here users can log a new transaction or navigate to key insigths from this central screen.
 
+Log a new transaction (Page: createExpense)
+Here users can add a new expense or invoice. The required fields that need to be field in are:
+1. transaction category (e.g., groceries, shopping)
+2. transaction amount
+3. mood at the time of spending (e.g. happy, stressed)
+4. data of transaction (selected todat or input manually)
+& submit via "add new" to save entry
+Upon saving, an instant nudge is shown, based on the mood-category patterns detected (from rule-based logic or ML models)
 
+Edit logged transaction (Page: editExpensve)
+From the home screen, users can selected a previously logged transaction. Fields can be updated and resaved for accuracy. This supports reflective behavior tracking over time.
+
+View mood & spending stats (Page: report)
+Presents a summary of moods and realted transactions, including mood identifiers, expense totals, insights at-a-glance. Users can click tpo view more detailed analytics in the dashboard.
+
+Mood-spend dashboard (Page: dashboarding)
+This page displays a 30-day mood tracking graph (based on past inputs) with spendings patterns aligned with moods. This includes predictive nudging insights and with a quick add (+) button allowing users to log a new transaction directly from here. 
+
+Account settings (Page: settings)
+Here users can update personal preference, modify language selection, and amange account information
+
+Search Your History (Page: search function)
+Users can search past transactions by mood, transaction category, amount, date or keyword which enables quick access to historical data and suppors behavior reflection.
+
+Nudging logic is divided into two sections:
+1. immediate nudges: appear after each transaciton is logged (via rule-based logic)
+2. Predictive nudges appear across the app at contextually relevant moments (e.g. daily summaries, high risk days), informed by backend ML models (e.g., impulse risk score anomaly detection). 
 
 Summary of workflow:
-The frontend UI/UX guides the user through a complete emotional-financial loop:
-
-
+The frontend UI/UX guides the user through a complete emotional-financial loop: logging --> reflection --> insight --> prediction --> adjustment. Where each page supports personal agency and behavior coaching, ensuring a smooth bridge to backend analytics and nudging engine.
 
 **Backend**
 The code is developed in the language of Python and was implemented via a notebook in the software Jupiter. The code is devided within clear steps.
