@@ -18,7 +18,7 @@ REST APIs need to be developed and documented, while also needed to be connected
 **- Frontend (Prototype via Flutterflow)**
 See the following link to view app within FLutterflow: https://app.flutterflow.io/project/dunn-sense-m-v-p-7zyqgt
 
-The frontend of the app provies a clean UI for user interaction, combined with UX. The input is gathered are used for logging transactions and moods, while visual placeholders are included for emotion analytics and recommendations. Here, ideally, the app also provides the nudges after the input of a transaction, but will also be futher included in the growth strategy of this business. 
+The frontend of the app provies a clean UI/UX for user interaction, combined with UX. The input is gathered and is used for logging transactions and moods, while visual placeholders are included for emotion analytics and recommendations. Here, ideally, the app also provides the nudges after the input of a transaction, but will also be futher included in the growth strategy of this business. 
 
 **The big question of course is, how does the app work? And what code currently runs and how?
 Frontend:**
@@ -53,7 +53,7 @@ This model detect days with unusual spenidng patterns, and it flags anomalies wi
 Model 4: Impulse Risk score (Random Forest)
 This model builds a personalized risk profile based on the day of the week, rolling spending patterns and the days since last transaction. Based on these variables, it predict impulse spending risk using another Random Forest model and adds nudges like "high risk today
 
-How to run the notebook: 
+**How to run the notebook?**
 1. Clone or download the repository
 2. Install Jupyter notebook (if needed):
 pip install notebook
