@@ -20,8 +20,17 @@ See the following link to view app within FLutterflow: https://app.flutterflow.i
 
 The frontend of the app provies a clean UI/UX for user interaction, combined with UX. The input is gathered and is used for logging transactions and moods, while visual placeholders are included for emotion analytics and recommendations. Here, ideally, the app also provides the nudges after the input of a transaction, but will also be futher included in the growth strategy of this business. 
 
-**The big question of course is, how does the app work? And what code currently runs and how?
-Frontend:**
+**The big question of course is, how does the app work? And what code currently runs and how?**
+**Frontend**
+
+
+
+
+
+Summary of workflow:
+The frontend UI/UX guides the user through a complete emotional-financial loop:
+
+
 
 **Backend**
 The code is developed in the language of Python and was implemented via a notebook in the software Jupiter. The code is devided within clear steps.
