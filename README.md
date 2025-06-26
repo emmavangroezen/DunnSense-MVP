@@ -1,5 +1,5 @@
 # DunnSense-MVP
-DunnSense - Your Mood-Based Financial Coach
+**DunnSense - Your Mood-Based Financial Coach**
 
 Welcome to DunnSense! A FinTech app that bridges emotional intelligence and financial literacy. The mission of DunnSense is to empower users to understand how their spending behaviors are influenced by their emotional states, using Ai-driven insights and personal analytics. 
 
@@ -23,10 +23,7 @@ The frontend of the app provies a clean UI for user interaction, combined with U
 **The big question of course is, how does the app work? And what code currently runs and how?
 Frontend:**
 
-
-
-
-****Backend: ****
+**Backend**
 The code is developed in the language of Python and was implemented via a notebook in the software Jupiter. The code is devided within clear steps.
 
 Step 1: introduction
@@ -67,12 +64,10 @@ pip install ipywidgets pandas plotly statsmodels scikit-learn
 4. run the notebook
 jypter notebook (within terminal), then open the notebook file (DunnSense_MVP and attached to this repository) and running the cells in order as displayed (Shift+Enter).
 
-**Small notes for users:
-**
+**Small notes for users:**
 The backend size of the app runs entirely in Jupyter Notebook, which is ideal for the demo and prototyping. No database or API connection is required for the MVP since the data is all simulated using faker or manual input. 
 
-**Looking forward (and vision ahead/ current vs planned features)
-**
+**Looking forward (and vision ahead/ current vs planned features)**
 While the current MVP esthablises the technical backbone and user experience, there is currently a lack of full integration and this aspect is therefore viewed as a strategic growth opportunity. Hence, the following plan includes the steps and vision DunnSense sees for itself:
 1. Hiring software engineers to integrate frontend with working backend APIs
 2. Scaling ML engine to incorporate real financial data
