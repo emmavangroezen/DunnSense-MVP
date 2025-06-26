@@ -1,1 +1,454 @@
-Python code
+# Step 1: Introduction - DunnSense MVP – Emotion-Aware Finance App
+
+# This Jupyter Notebook demonstrates the Minimum Viable Product (MVP) for DunnSense, a FinTech application that helps users understand how their emotions influence their financial behavior.
+
+# Here the app simulates:
+# Mood + spending input
+# A rule-based nudge engine that gives feedback
+# A simple visualization showing how mood and spending are related
+
+# Step 2: Install libraries and functions needed
+# Install if needed
+import ipywidgets as widgets
+from IPython.display import display, clear_output
+from datetime import datetime
+import pandas as pd
+!pip install ipywidgets
+
+# Step 3: logging of mood and transactions
+from datetime import datetime
+import pandas as pd
+
+# Mood and category options
+mood_options = [
+    "happy", "sad", "stressed", "anxious", "bored", "angry", "excited", "lonely", "calm"
+]
+category_options = [
+    "shopping", "groceries", "entertainment", "bills", "savings",
+    "subscriptions", "health", "eating out"
+]
+
+# Initialize main DataFrame
+if 'history_df' not in globals():
+    history_df = pd.DataFrame(columns=["date", "mood", "amount", "category"])
+
+# Validate text input
+def get_valid_input(prompt, valid_list):
+    while True:
+        value = input(prompt).strip().lower()
+        if value in valid_list:
+            return value
+        print(f"❗ Invalid input. Choose from: {valid_list}")
+
+# Collect a single entry
+def get_entry():
+    mood = get_valid_input(f"Enter your current mood {mood_options}: ", mood_options)
+    while True:
+        try:
+            amount = float(input("Enter the amount you spent (€): ").strip())
+            break
+        except ValueError:
+            print("❗ Invalid amount. Try again.")
+    category = get_valid_input(f"What category was this? {category_options}: ", category_options)
+    entry_date = datetime.now().strftime("%b %d")
+    return {"date": entry_date, "mood": mood, "amount": amount, "category": category}
+
+# Simulated CSV import (e.g., from PSD2)
+def import_simulated_data(file_path="simulated_transactions.csv"):
+    try:
+        df = pd.read_csv(file_path)
+        df["amount"] = pd.to_numeric(df["amount"], errors="coerce")
+        print(f"✅ Imported {len(df)} entries from simulated data.")
+        return df
+    except Exception as e:
+        print(f"❌ Failed to import data: {e}")
+        return pd.DataFrame(columns=["date", "mood", "amount", "category"])
+
+# Merge CSV into main history
+simulated_df = import_simulated_data()
+history_df = pd.concat([history_df, simulated_df], ignore_index=True)
+
+# Step 4: Creating nudges after input of mood and transaction
+# Rule-based nudge engine
+def generate_nudge(mood, category):
+    if mood in ["stressed", "sad", "anxious", "angry"] and category == "shopping":
+        return "🛑 Looks like you're emotional-shopping. Maybe take a pause or go for a walk?"
+    elif mood == "bored" and category in ["entertainment", "shopping", "eating out"]:
+        return "👀 Bored spending detected! Could a free activity help instead?"
+    elif mood == "happy" and category == "savings":
+        return "🎉 Amazing! You're saving when you feel good — strong financial habits form here!"
+    elif mood == "lonely" and category in ["subscriptions", "entertainment"]:
+        return "💡 Feeling lonely? Subscriptions might help short-term — could a call or walk be more fulfilling?"
+    elif mood in ["stressed", "anxious"] and category == "bills":
+        return "📌 It’s great you’re handling bills even under pressure. That’s real resilience."
+    elif mood in ["stressed", "angry", "anxious"] and category == "health":
+        return "🧠 Taking care of your health while feeling low is a brave and self-respecting move. Well done."
+    elif mood == "excited" and category in ["entertainment", "shopping", "eating out"]:
+        return "🥳 You're riding a high! Just a gentle nudge: is this spending joyful or impulsive?"
+    elif mood == "calm" and category == "savings":
+        return "🌱 Calm moments are a great time to invest or save — habits grow from peace, too."
+    elif category == "groceries":
+        return "🛒 Was this a routine grocery trip or an emotional comfort food moment? No judgment — just reflect."
+    else:
+        return "✅ Thanks for logging. Every entry helps you understand your habits better. You're doing great 💪."
+# Run input + nudge loop
+while True:
+    print("\n📥 New DunnSense Entry")
+    entry = get_entry()
+    history_df = pd.concat([history_df, pd.DataFrame([entry])], ignore_index=True)
+
+    print("\n✅ Entry recorded!")
+    display(history_df.tail(5))
+
+    print("\n💬 DunnSense Nudge:")
+    print(generate_nudge(entry["mood"], entry["category"]))
+
+    again = input("\nWould you like to log another entry? (yes/no): ").strip().lower()
+    if again != "yes":
+        break
+
+# Step 5: Dashboarding
+import plotly.express as px
+
+# Ensure numeric and clean values
+history_df["amount"] = pd.to_numeric(history_df["amount"], errors="coerce")
+history_df = history_df.dropna(subset=["amount"])
+
+# ✅ Convert string date (e.g. 'Jun 23') to real datetime (assume current year)
+history_df["date_parsed"] = pd.to_datetime(history_df["date"] + f" {datetime.now().year}", format="%b %d %Y", errors="coerce")
+
+# Drop bad dates if any
+history_df = history_df.dropna(subset=["date_parsed"])
+
+# Sort by parsed date
+history_df = history_df.sort_values(by="date_parsed")
+
+if not history_df.empty:
+    # 📊 Bar chart: average spend by mood
+    avg_mood = history_df.groupby("mood")["amount"].mean().reset_index()
+    fig1 = px.bar(avg_mood, x="mood", y="amount", color="mood",
+                  title="💰 Average Spending by Mood",
+                  labels={"amount": "Avg € Spent"})
+    fig1.show()
+
+    # 📈 Daily mood trends
+    daily_trend = history_df.groupby(["date_parsed", "mood"])["amount"].sum().reset_index()
+    fig2 = px.line(daily_trend, x="date_parsed", y="amount", color="mood",
+                   title="📈 Spending Over Days by Mood",
+                   labels={"date_parsed": "Date", "amount": "€ Spent"})
+    fig2.update_layout(xaxis_tickformat="%b %d")  # cleaner labels
+    fig2.show()
+
+    # 💾 Save to CSV
+    history_df.to_csv("dunnsense_history.csv", index=False)
+    print("✅ Data saved to 'dunnsense_history.csv'")
+
+    # 🧾 Session summary
+    print("\n📊 Session Summary:")
+    print(f"Total entries: {len(history_df)}")
+    print(f"Total spent: €{history_df['amount'].sum():.2f}")
+    top_mood = history_df['mood'].value_counts().idxmax()
+    print(f"Most common mood: {top_mood}")
+else:
+    print("📉 No data to visualize.")
+
+# Step 6: Modeling and ML integration
+# Classification essentials
+# Implementing map mood from strings to integer with logic of 5 = Very positive (e.g., happy, excited), 3 = Neutral or relaxed (e.g., calm, bored), 1 = Very negative (e.g., sad, angry, anxious)
+mood_map = {
+    "happy": 5,
+    "excited": 5,
+    "calm": 4,
+    "bored": 3,
+    "lonely": 2,
+    "stressed": 2,
+    "anxious": 2,
+    "sad": 1,
+    "angry": 1
+}
+
+# Map mood to numeric score
+history_df['mood_score'] = history_df['mood'].map(mood_map)
+
+# Check for unmapped moods
+unmapped = history_df[history_df['mood_score'].isna()]['mood'].unique()
+if len(unmapped) > 0:
+    print("⚠️ Unmapped mood labels found:", unmapped)
+
+# Mood forecast (time-series); 7day forecast of mood prediction
+# Model 1: ARIMA
+from statsmodels.tsa.arima.model import ARIMA
+
+df_mood = history_df[['date_parsed', 'mood_score']].dropna().groupby('date_parsed').mean()
+df_mood = df_mood.asfreq('D')  # daily frequency
+
+model = ARIMA(df_mood['mood_score'], order=(1, 1, 1))
+result = model.fit()
+forecast = result.forecast(steps=7)
+
+print("📅 7-Day Mood Forecast (ARIMA):")
+print(forecast)
+
+# 3. Interpretation function
+def interpret_mood_forecast(forecast_series):
+    nudges = []
+
+    for date, score in forecast_series.items():
+        if score < 2:
+            mood = "😞 Very Low"
+            tip = "Try journaling or reaching out to a friend. A small walk could help reset your day."
+        elif 2 <= score < 2.5:
+            mood = "😕 Low"
+            tip = "Consider doing something uplifting today — maybe music or a break from screens?"
+        elif 2.5 <= score < 3.5:
+            mood = "😐 Neutral"
+            tip = "Stay mindful. Keep routines balanced and take short breaks when needed."
+        elif 3.5 <= score < 4.5:
+            mood = "🙂 Positive"
+            tip = "You're on a good track! Keep it up with small wins and gratitude moments."
+        else:
+            mood = "😄 Very Positive"
+            tip = "You're glowing! Use this momentum to plan or start something meaningful."
+
+        nudges.append({
+            "date": date.strftime("%Y-%m-%d"),
+            "mood_score": round(score, 2),
+            "mood_label": mood,
+            "nudge": tip
+        })
+
+    return nudges
+    
+# 4. Generate interpretation with nudges
+nudged_forecast = interpret_mood_forecast(forecast)
+print("\n🧠 Mood Forecast with Nudges:")
+for n in nudged_forecast:
+    print(f"{n['date']} — {n['mood_label']} (Score: {n['mood_score']}): {n['nudge']}")
+
+# Weekly mood prediction based on previous week
+
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import classification_report
+import pandas as pd
+
+# Feature Engineering
+# Create spend columns per date
+history_df['total_spend'] = history_df.groupby('date_parsed')['amount'].transform('sum')
+
+# Ensure 'is_essential' exists
+if 'is_essential' not in history_df.columns:
+    history_df['is_essential'] = False  # fallback if not available
+
+history_df['essential_spend'] = history_df.where(history_df['is_essential']).groupby('date_parsed')['amount'].transform('sum').fillna(0)
+history_df['nonessential_spend'] = history_df.where(~history_df['is_essential']).groupby('date_parsed')['amount'].transform('sum').fillna(0)
+
+# Map Mood and Create Mood Classes (just in case the previous code did not run)
+# Define mood mapping
+mood_map = {
+    "happy": 5,
+    "excited": 5,
+    "calm": 4,
+    "bored": 3,
+    "lonely": 2,
+    "stressed": 2,
+    "anxious": 2,
+    "sad": 1,
+    "angry": 1
+}
+
+# Apply mapping and fill unknowns with neutral (3)
+history_df['mapped_mood'] = history_df['mood'].map(mood_map).fillna(3)
+
+# Bin mapped mood into classes: low (1–2), neutral (3), high (4–5)
+history_df['mood_class'] = pd.cut(history_df['mapped_mood'],
+                                  bins=[0, 2, 3, 5],
+                                  labels=['low', 'neutral', 'high'])
+
+# Drop rows with missing mood_class or spend features
+classification_df = history_df[['total_spend', 'essential_spend', 'nonessential_spend', 'mood_class']].dropna()
+
+# Train Random Forest Classifier
+X = classification_df[['total_spend', 'essential_spend', 'nonessential_spend']]
+y = classification_df['mood_class']
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, stratify=y, random_state=42)
+
+clf = RandomForestClassifier(random_state=42)
+clf.fit(X_train, y_train)
+y_pred = clf.predict(X_test)
+
+# Show Evaluation 
+print("\n🧠 Mood Prediction Classification Report:")
+print(classification_report(y_test, y_pred))
+
+# Interpretation of mood predication classification report
+def generate_nudge(predicted_class, spend_row=None):
+    if predicted_class == "low":
+        return {
+            "mood_label": "😞 Low mood predicted",
+            "nudge": "It looks like you're spending more than usual on non-essentials. Try planning a quiet break or journaling today."
+        }
+    elif predicted_class == "neutral":
+        return {
+            "mood_label": "😐 Neutral mood predicted",
+            "nudge": "You're steady — nice! Keep an eye on spending balance and consider doing something creative today."
+        }
+    elif predicted_class == "high":
+        return {
+            "mood_label": "😄 High mood predicted",
+            "nudge": "You're trending positive! A great time to do something energizing — maybe treat yourself or call a friend."
+        }
+    else:
+        return {
+            "mood_label": "🤔 Unknown",
+            "nudge": "Unable to determine mood. Check if recent data is missing or incomplete."
+        }
+# Get predictions for latest entries
+latest_entries = X_test.tail(5)  # or use the most recent spending data
+predicted_classes = clf.predict(latest_entries)
+
+# Generate nudges for those
+nudges = []
+for i, mood in enumerate(predicted_classes):
+    nudge = generate_nudge(mood, latest_entries.iloc[i])
+    nudges.append(nudge)
+
+# Show results
+for n in nudges:
+    print(f"{n['mood_label']}: {n['nudge']}")
+from sklearn.inspection import permutation_importance
+
+# Anomaly Detection: Unsupervised Learning; Detect days with unusual spending behavior and classifies anamolys
+from sklearn.ensemble import IsolationForest
+
+# Step 1: Aggregate spending features by day
+spending_features = history_df.groupby('date_parsed').agg({
+    'amount': ['sum', 'mean', 'std'],
+    'is_essential': 'sum'
+}).fillna(0)
+
+# Step 2: Rename columns for clarity
+spending_features.columns = ['total', 'mean', 'std', 'essential_count']
+
+# Step 3: Fit Isolation Forest model
+model = IsolationForest(contamination=0.05, random_state=42)
+model.fit(spending_features)
+
+# Step 4: Predict anomalies (per date)
+spending_features['anomaly'] = model.predict(spending_features)
+spending_features['anomaly'] = spending_features['anomaly'].map({1: 0, -1: 1})  # 1 = anomaly
+
+# Step 5: Safely merge anomaly scores back into history_df
+if 'anomaly' in history_df.columns:
+    history_df = history_df.drop(columns='anomaly')
+
+history_df = history_df.merge(
+    spending_features[['anomaly']],
+    left_on='date_parsed',
+    right_index=True,
+    how='left'
+)
+
+# Nudge Logic
+# Define nudge generation rules
+def generate_nudge(row):
+    if row['anomaly'] == 1:
+        return "🔍 Unusual spending today — take a moment to reflect on what changed."
+    elif row['mood_class'] == 'low' and row['nonessential_spend'] > row['essential_spend']:
+        return "🧘 Mood is low and non-essential spending is high — consider a break or budget review."
+    elif row['mood_class'] == 'neutral' and row['total_spend'] > 1.5 * row['essential_spend']:
+        return "📊 Keep an eye on your spending today — most of it was non-essential."
+    elif row['mood_class'] == 'high':
+        return "😄 You're feeling good! This might be a great time to plan a savings goal."
+    else:
+        return "📅 All looks normal today — keep steady!"
+
+# Apply nudge logic to each row
+history_df['nudge'] = history_df.apply(generate_nudge, axis=1)
+
+# Display recent nudges
+recent_nudges = history_df[['date_parsed', 'total_spend', 'mood_class', 'anomaly', 'nudge']] \
+    .sort_values(by='date_parsed', ascending=False).head(7)
+
+from IPython.display import display
+display(recent_nudges)
+
+# Personalized "Impulse Risk Score" including daily nudge based on risk profile; based on non-essential spending
+# Create the required features
+# 1. Day type (weekday/weekend)
+history_df['day_type'] = history_df['date_parsed'].dt.dayofweek.apply(lambda x: 'weekend' if x >= 5 else 'weekday')
+
+# One-hot encode day_type
+history_df = pd.get_dummies(history_df, columns=['day_type'], drop_first=True)
+
+# 2. Rolling 7-day total spend
+history_df = history_df.sort_values('date_parsed')
+history_df['rolling_7d_spend'] = history_df['total_spend'].rolling(window=7, min_periods=1).mean()
+
+# 3. Days since last transaction
+history_df['days_since_last_txn'] = history_df['date_parsed'].diff().dt.days.fillna(0)
+
+# 4. Create impulse_day label
+history_df['impulse_day'] = (
+    (history_df['mood_class'] == 'high') &
+    (history_df['nonessential_spend'] > 1.5 * history_df['essential_spend'])
+).astype(int)
+
+# Define feature list and target 
+features = [
+    'total_spend',
+    'essential_spend',
+    'nonessential_spend',
+    'rolling_7d_spend',
+    'days_since_last_txn',
+    'day_type_weekend',  # from one-hot encoding
+    'anomaly'
+]
+
+# Drop rows with missing data for these columns
+X = history_df[features].dropna()
+y = history_df.loc[X.index, 'impulse_day']
+
+# Train a Random Forest Classifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=y, random_state=42)
+
+clf = RandomForestClassifier(random_state=42)
+clf.fit(X_train, y_train)
+
+# Predict Impulse Risk Score
+history_df.loc[X.index, 'impulse_risk_score'] = clf.predict_proba(X)[:, 1]
+
+# Adding nudges
+def risk_nudge_logic(row):
+    if pd.isna(row['impulse_risk_score']):
+        return None
+    elif row['impulse_risk_score'] > 0.8:
+        return "⚠️ High risk of impulse spending today — try a no-spend challenge or review your savings goal."
+    elif row['impulse_risk_score'] > 0.6:
+        return "🧠 Slightly elevated spending risk — consider pausing before making non-essential purchases."
+    elif row['impulse_risk_score'] > 0.4:
+        return "🔍 Risk is moderate — track your emotions before spending."
+    else:
+        return None  # No nudge if risk is low
+
+history_df['risk_nudge'] = history_df.apply(risk_nudge_logic, axis=1)
+
+#Combine with general nudges
+# Create a combined nudge: priority to risk_nudge if it exists
+history_df['final_nudge'] = history_df['risk_nudge'].combine_first(history_df['nudge'])
+
+high_risk_nudges = history_df[
+    history_df['impulse_risk_score'] > 0.6
+][['date_parsed', 'impulse_risk_score', 'mood_class', 'total_spend', 'nonessential_spend', 'final_nudge']] \
+.sort_values(by='date_parsed', ascending=False).head(10)
+
+from IPython.display import display
+display(high_risk_nudges)
+
+# final runcell
+print("✅ DunnSense backend MVP run complete — all models executed and nudges generated.")
+
