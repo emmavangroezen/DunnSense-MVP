@@ -1,7 +1,7 @@
 # DunnSense-MVP
 **DunnSense - Your Mood-Based Financial Coach**
 
-Welcome to DunnSense! A FinTech app that bridges emotional intelligence and financial literacy. The mission of DunnSense is to empower users to understand how their spending behaviors are influenced by their emotional states, using Ai-driven insights and personal analytics. 
+Welcome to DunnSense! A FinTech app that bridges emotional intelligence and financial literacy. The mission of DunnSense is to empower users to understand how their spending behaviors are influenced by their emotional states, using AI-driven insights and personal analytics. 
 
 The app of DunnSense revolves around the idea that users are able to log transactions that have taken place with associated moods and timestamps. These inputs will then be visualised in emotional spending patterns based on machine learning algorithms with increasing financial well-being with real-life nudges based on history of transactions. Within the app, it will also be possible to see potential future spending patterns and mood predictions based in the inputted history, where the app will prepare for a future where mood-based financial recommendations will be prompted. 
 
