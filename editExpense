@@ -1,0 +1,657 @@
+// Generated code for this typeDropdown Widget...
+FlutterFlowDropDown<String>(
+  controller: _model.typeDropdownValueController ??=
+      FormFieldController<String>(
+    _model.typeDropdownValue ??= 'INVOICE',
+  ),
+  options: List<String>.from(['EXPENSE', 'INVOICE']),
+  optionLabels: [
+    FFLocalizations.of(context).getText(
+      'fw9vxr1w' /* Expense */,
+    ),
+    FFLocalizations.of(context).getText(
+      'c8ij0gvp' /* Invoice */,
+    )
+  ],
+  onChanged: (val) => safeSetState(() => _model.typeDropdownValue = val),
+  width: 300.0,
+  height: 50.0,
+  textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
+        font: GoogleFonts.inter(
+          fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+          fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+        ),
+        letterSpacing: 0.0,
+        fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+        fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+      ),
+  hintText: FFLocalizations.of(context).getText(
+    'hko6ezg3' /* Income/Budget */,
+  ),
+  icon: Icon(
+    Icons.keyboard_arrow_down_rounded,
+    color: FlutterFlowTheme.of(context).secondaryText,
+    size: 24.0,
+  ),
+  fillColor: FlutterFlowTheme.of(context).secondaryBackground,
+  elevation: 2.0,
+  borderColor: FlutterFlowTheme.of(context).alternate,
+  borderWidth: 2.0,
+  borderRadius: 8.0,
+  margin: EdgeInsetsDirectional.fromSTEB(12.0, 4.0, 12.0, 4.0),
+  hidesUnderline: true,
+  isSearchable: false,
+  isMultiSelect: false,
+)
+// Generated code for this categoryDropdown Widget...
+Padding(
+  padding: EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 1.0),
+  child: FlutterFlowDropDown<String>(
+    controller: _model.categoryDropdownValueController1 ??=
+        FormFieldController<String>(
+      _model.categoryDropdownValue1 ??= '',
+    ),
+    options: List<String>.from([
+      'CAFE',
+      'DONATE',
+      'EDUCATION',
+      'ELECTRONICS',
+      'FUEL',
+      'GIFTS',
+      'GROCERIES',
+      'HEALTH',
+      'INSTITUTE',
+      'LAUNDRY',
+      'LIQUOR',
+      'MAINTENANCE',
+      'PARTY',
+      'RESTAURANT',
+      'SAVINGS',
+      'SELF DEVELOPMENT',
+      'SPORT',
+      'TRANSPORTATION'
+    ]),
+    optionLabels: [
+      FFLocalizations.of(context).getText(
+        'nr8h2ng1' /* Cafe */,
+      ),
+      FFLocalizations.of(context).getText(
+        'z05440ij' /* Donate */,
+      ),
+      FFLocalizations.of(context).getText(
+        '5uh6sul0' /* Education */,
+      ),
+      FFLocalizations.of(context).getText(
+        'w5hqz7yh' /* Electronics */,
+      ),
+      FFLocalizations.of(context).getText(
+        '8gw9w48m' /* Fuel */,
+      ),
+      FFLocalizations.of(context).getText(
+        'x9y9xu7k' /* Gifts */,
+      ),
+      FFLocalizations.of(context).getText(
+        'liw1djky' /* Groceries */,
+      ),
+      FFLocalizations.of(context).getText(
+        'nz1ihdqw' /* Health */,
+      ),
+      FFLocalizations.of(context).getText(
+        '80ibmr1j' /* Institute */,
+      ),
+      FFLocalizations.of(context).getText(
+        'yva1sh8h' /* Laundry */,
+      ),
+      FFLocalizations.of(context).getText(
+        'nu1fvykc' /* Liquor */,
+      ),
+      FFLocalizations.of(context).getText(
+        'bv3dr91r' /* Maintenance */,
+      ),
+      FFLocalizations.of(context).getText(
+        'etzdfyfa' /* Party */,
+      ),
+      FFLocalizations.of(context).getText(
+        '6fyj8k7i' /* Resturant */,
+      ),
+      FFLocalizations.of(context).getText(
+        '23e13o2q' /* Savings */,
+      ),
+      FFLocalizations.of(context).getText(
+        'ydnrvygz' /* Self Development */,
+      ),
+      FFLocalizations.of(context).getText(
+        '057cd24w' /* Sport */,
+      ),
+      FFLocalizations.of(context).getText(
+        'dbec15tp' /* Transportation */,
+      )
+    ],
+    onChanged: (val) =>
+        safeSetState(() => _model.categoryDropdownValue1 = val),
+    width: 300.0,
+    height: 50.0,
+    textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
+          font: GoogleFonts.inter(
+            fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+            fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+          ),
+          letterSpacing: 0.0,
+          fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+          fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+        ),
+    hintText: FFLocalizations.of(context).getText(
+      'q8mye2zp' /* Select Category */,
+    ),
+    icon: Icon(
+      Icons.keyboard_arrow_down_rounded,
+      color: FlutterFlowTheme.of(context).secondaryText,
+      size: 24.0,
+    ),
+    fillColor: FlutterFlowTheme.of(context).secondaryBackground,
+    elevation: 2.0,
+    borderColor: FlutterFlowTheme.of(context).alternate,
+    borderWidth: 2.0,
+    borderRadius: 8.0,
+    margin: EdgeInsetsDirectional.fromSTEB(12.0, 4.0, 12.0, 4.0),
+    hidesUnderline: true,
+    isSearchable: false,
+    isMultiSelect: false,
+  ),
+)
+// Generated code for this tfAmount Widget...
+Padding(
+  padding: EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
+  child: TextFormField(
+    controller: _model.tfAmountTextController,
+    focusNode: _model.tfAmountFocusNode,
+    autofocus: false,
+    textCapitalization: TextCapitalization.none,
+    textInputAction: TextInputAction.next,
+    obscureText: false,
+    decoration: InputDecoration(
+      labelText: FFLocalizations.of(context).getText(
+        'ifjlvbhd' /* Enter amount */,
+      ),
+      labelStyle: FlutterFlowTheme.of(context).labelMedium.override(
+            font: GoogleFonts.inter(
+              fontWeight: FlutterFlowTheme.of(context).labelMedium.fontWeight,
+              fontStyle: FlutterFlowTheme.of(context).labelMedium.fontStyle,
+            ),
+            letterSpacing: 0.0,
+            fontWeight: FlutterFlowTheme.of(context).labelMedium.fontWeight,
+            fontStyle: FlutterFlowTheme.of(context).labelMedium.fontStyle,
+          ),
+      hintStyle: FlutterFlowTheme.of(context).labelMedium.override(
+            font: GoogleFonts.inter(
+              fontWeight: FlutterFlowTheme.of(context).labelMedium.fontWeight,
+              fontStyle: FlutterFlowTheme.of(context).labelMedium.fontStyle,
+            ),
+            letterSpacing: 0.0,
+            fontWeight: FlutterFlowTheme.of(context).labelMedium.fontWeight,
+            fontStyle: FlutterFlowTheme.of(context).labelMedium.fontStyle,
+          ),
+      errorStyle: FlutterFlowTheme.of(context).bodyMedium.override(
+            font: GoogleFonts.inter(
+              fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+              fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+            ),
+            color: FlutterFlowTheme.of(context).error,
+            letterSpacing: 0.0,
+            fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+            fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+          ),
+      enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(
+          color: FlutterFlowTheme.of(context).alternate,
+          width: 2.0,
+        ),
+        borderRadius: BorderRadius.circular(8.0),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(
+          color: FlutterFlowTheme.of(context).primary,
+          width: 2.0,
+        ),
+        borderRadius: BorderRadius.circular(8.0),
+      ),
+      errorBorder: OutlineInputBorder(
+        borderSide: BorderSide(
+          color: FlutterFlowTheme.of(context).error,
+          width: 2.0,
+        ),
+        borderRadius: BorderRadius.circular(8.0),
+      ),
+      focusedErrorBorder: OutlineInputBorder(
+        borderSide: BorderSide(
+          color: FlutterFlowTheme.of(context).error,
+          width: 2.0,
+        ),
+        borderRadius: BorderRadius.circular(8.0),
+      ),
+      filled: true,
+      fillColor: Colors.white,
+    ),
+    style: FlutterFlowTheme.of(context).bodyMedium.override(
+          font: GoogleFonts.inter(
+            fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+            fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+          ),
+          letterSpacing: 0.0,
+          fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+          fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+        ),
+    keyboardType: const TextInputType.numberWithOptions(decimal: true),
+    validator: _model.tfAmountTextControllerValidator.asValidator(context),
+    inputFormatters: [
+      if (!isAndroid && !isiOS)
+        TextInputFormatter.withFunction((oldValue, newValue) {
+          return TextEditingValue(
+            selection: newValue.selection,
+            text: newValue.text.toCapitalization(TextCapitalization.none),
+          );
+        }),
+      FilteringTextInputFormatter.allow(RegExp('^[-]?[0-9.]*\$'))
+    ],
+  ),
+)
+// Generated code for this categoryDropdown Widget...
+Padding(
+  padding: EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 1.0),
+  child: FlutterFlowDropDown<String>(
+    controller: _model.categoryDropdownValueController2 ??=
+        FormFieldController<String>(
+      _model.categoryDropdownValue2 ??= '',
+    ),
+    options: List<String>.from([
+      'DONATE',
+      'EDUCATION',
+      'ELECTRONICS',
+      'FUEL',
+      'GIFTS',
+      'GROCERIES',
+      'HEALTH',
+      'INSTITUTE',
+      'LAUNDRY',
+      'LIQUOR',
+      'MAINTENANCE',
+      'PARTY',
+      'RESTAURANT',
+      'SAVINGS',
+      'SELF DEVELOPMENT',
+      'SPORT',
+      'TRANSPORTATION'
+    ]),
+    optionLabels: [
+      FFLocalizations.of(context).getText(
+        'bbhbs8nm' /* happy */,
+      ),
+      FFLocalizations.of(context).getText(
+        'tugp3faj' /* sad */,
+      ),
+      FFLocalizations.of(context).getText(
+        'derk51xe' /* stressed */,
+      ),
+      FFLocalizations.of(context).getText(
+        '1ly9abx0' /* bored */,
+      ),
+      FFLocalizations.of(context).getText(
+        'jyaxtr08' /* angry */,
+      ),
+      FFLocalizations.of(context).getText(
+        '9125qoyq' /* excited */,
+      ),
+      FFLocalizations.of(context).getText(
+        'blwzhdtm' /* lonely */,
+      ),
+      FFLocalizations.of(context).getText(
+        'n5cjubzm' /* calm */,
+      ),
+      FFLocalizations.of(context).getText(
+        'ovbw23lv' /*  */,
+      ),
+      FFLocalizations.of(context).getText(
+        'hzdjxc9f' /*  */,
+      ),
+      FFLocalizations.of(context).getText(
+        '28uop8r3' /*  */,
+      ),
+      FFLocalizations.of(context).getText(
+        'a6ghnkm7' /*  */,
+      ),
+      FFLocalizations.of(context).getText(
+        'luuuc67u' /*  */,
+      ),
+      FFLocalizations.of(context).getText(
+        'oqeozqwx' /*  */,
+      ),
+      FFLocalizations.of(context).getText(
+        'xosefr9b' /*  */,
+      ),
+      FFLocalizations.of(context).getText(
+        '2k02zva9' /*  */,
+      ),
+      FFLocalizations.of(context).getText(
+        '7u4yff8o' /*  */,
+      )
+    ],
+    onChanged: (val) =>
+        safeSetState(() => _model.categoryDropdownValue2 = val),
+    width: 300.0,
+    height: 50.0,
+    textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
+          font: GoogleFonts.inter(
+            fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+            fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+          ),
+          letterSpacing: 0.0,
+          fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+          fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+        ),
+    hintText: FFLocalizations.of(context).getText(
+      'rah2j1jy' /* Select Category */,
+    ),
+    icon: Icon(
+      Icons.keyboard_arrow_down_rounded,
+      color: FlutterFlowTheme.of(context).secondaryText,
+      size: 24.0,
+    ),
+    fillColor: FlutterFlowTheme.of(context).secondaryBackground,
+    elevation: 2.0,
+    borderColor: FlutterFlowTheme.of(context).alternate,
+    borderWidth: 2.0,
+    borderRadius: 8.0,
+    margin: EdgeInsetsDirectional.fromSTEB(12.0, 4.0, 12.0, 4.0),
+    hidesUnderline: true,
+    isSearchable: false,
+    isMultiSelect: false,
+  ),
+)
+// Generated code for this Row Widget...
+InkWell(
+  splashColor: Colors.transparent,
+  focusColor: Colors.transparent,
+  hoverColor: Colors.transparent,
+  highlightColor: Colors.transparent,
+  onTap: () async {
+    final _datePickedDate = await showDatePicker(
+      context: context,
+      initialDate: getCurrentTimestamp,
+      firstDate: DateTime(1900),
+      lastDate: DateTime(2050),
+    );
+    if (_datePickedDate != null) {
+      safeSetState(() {
+        _model.datePicked = DateTime(
+          _datePickedDate.year,
+          _datePickedDate.month,
+          _datePickedDate.day,
+        );
+      });
+    } else if (_model.datePicked != null) {
+      safeSetState(() {
+        _model.datePicked = getCurrentTimestamp;
+      });
+    }
+    _model.selectedDate = _model.datePicked;
+    safeSetState(() {});
+  },
+  child: Row(
+    mainAxisSize: MainAxisSize.max,
+    children: [
+      Icon(
+        Icons.date_range,
+        color: FlutterFlowTheme.of(context).secondaryText,
+        size: 24.0,
+      ),
+      Padding(
+        padding: EdgeInsetsDirectional.fromSTEB(6.0, 12.0, 0.0, 12.0),
+        child: Text(
+          _model.selectedDate == null
+              ? 'Selecione uma data'
+              : dateTimeFormat(
+                  "dd/MM/yyyy",
+                  _model.selectedDate,
+                  locale: FFLocalizations.of(context).languageCode,
+                ),
+          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                font: GoogleFonts.inter(
+                  fontWeight:
+                      FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                  fontStyle:
+                      FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                ),
+                letterSpacing: 0.0,
+                fontWeight:
+                    FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+              ),
+        ),
+      ),
+    ],
+  ),
+)
+// Generated code for this Icon Widget...
+Icon(
+  Icons.date_range,
+  color: FlutterFlowTheme.of(context).secondaryText,
+  size: 24.0,
+)
+// Generated code for this Text Widget...
+Padding(
+  padding: EdgeInsetsDirectional.fromSTEB(6.0, 12.0, 0.0, 12.0),
+  child: Text(
+    _model.selectedDate == null
+        ? 'Selecione uma data'
+        : dateTimeFormat(
+            "dd/MM/yyyy",
+            _model.selectedDate,
+            locale: FFLocalizations.of(context).languageCode,
+          ),
+    style: FlutterFlowTheme.of(context).bodyMedium.override(
+          font: GoogleFonts.inter(
+            fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+            fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+          ),
+          letterSpacing: 0.0,
+          fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+          fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+        ),
+  ),
+)
+// Generated code for this Container Widget...
+Align(
+  alignment: AlignmentDirectional(0.0, 0.0),
+  child: Builder(
+    builder: (context) => Padding(
+      padding: EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
+      child: InkWell(
+        splashColor: Colors.transparent,
+        focusColor: Colors.transparent,
+        hoverColor: Colors.transparent,
+        highlightColor: Colors.transparent,
+        onTap: () async {
+          var _shouldSetState = false;
+          await showDialog(
+            context: context,
+            builder: (dialogContext) {
+              return Dialog(
+                elevation: 0,
+                insetPadding: EdgeInsets.zero,
+                backgroundColor: Colors.transparent,
+                alignment: AlignmentDirectional(0.0, 0.0)
+                    .resolve(Directionality.of(context)),
+                child: GestureDetector(
+                  onTap: () {
+                    FocusScope.of(dialogContext).unfocus();
+                    FocusManager.instance.primaryFocus?.unfocus();
+                  },
+                  child: Container(
+                    width: MediaQuery.sizeOf(context).width * 0.85,
+                    child: CustomConfirmDialogWidget(
+                      title: FFLocalizations.of(context).getText(
+                        'izjvzi7f' /* Confirm delete */,
+                      ),
+                      message: FFLocalizations.of(context).getText(
+                        'r4m1t0a1' /* Are you sure you want to delet... */,
+                      ),
+                      cancelLabel: FFLocalizations.of(context).getText(
+                        '2gh6bfnu' /* Cancel */,
+                      ),
+                      confirmLabel: FFLocalizations.of(context).getText(
+                        '6bd89nbx' /* Confirm */,
+                      ),
+                    ),
+                  ),
+                ),
+              );
+            },
+          ).then((value) => safeSetState(() => _model.confirmDelete = value));
+          _shouldSetState = true;
+          if (_model.confirmDelete == true) {
+            FFAppState().removeAtIndexFromAllExpenses(widget!.expenseId!);
+            safeSetState(() {});
+          } else {
+            if (_shouldSetState) safeSetState(() {});
+            return;
+          }
+          context.safePop();
+          if (_shouldSetState) safeSetState(() {});
+        },
+        child: Container(
+          decoration: BoxDecoration(
+            color: Color(0x004B39EF),
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.delete_forever_rounded,
+                color: FlutterFlowTheme.of(context).error,
+                size: 24.0,
+              ),
+              Text(
+                FFLocalizations.of(context).getText(
+                  'tbhvf5pj' /* Delete */,
+                ),
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      font: GoogleFonts.inter(
+                        fontWeight: FlutterFlowTheme.of(context)
+                            .bodyMedium
+                            .fontWeight,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      ),
+                      color: FlutterFlowTheme.of(context).error,
+                      fontSize: 18.0,
+                      letterSpacing: 0.0,
+                      fontWeight:
+                          FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                      fontStyle:
+                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                    ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    ),
+  ),
+)
+// Generated code for this Row Widget...
+Row(
+  mainAxisSize: MainAxisSize.min,
+  mainAxisAlignment: MainAxisAlignment.center,
+  crossAxisAlignment: CrossAxisAlignment.center,
+  children: [
+    Icon(
+      Icons.delete_forever_rounded,
+      color: FlutterFlowTheme.of(context).error,
+      size: 24.0,
+    ),
+    Text(
+      FFLocalizations.of(context).getText(
+        'tbhvf5pj' /* Delete */,
+      ),
+      style: FlutterFlowTheme.of(context).bodyMedium.override(
+            font: GoogleFonts.inter(
+              fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+              fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+            ),
+            color: FlutterFlowTheme.of(context).error,
+            fontSize: 18.0,
+            letterSpacing: 0.0,
+            fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+            fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+          ),
+    ),
+  ],
+)
+// Generated code for this Icon Widget...
+Icon(
+  Icons.delete_forever_rounded,
+  color: FlutterFlowTheme.of(context).error,
+  size: 24.0,
+)
+// Generated code for this Text Widget...
+Text(
+  FFLocalizations.of(context).getText(
+    'tbhvf5pj' /* Delete */,
+  ),
+  style: FlutterFlowTheme.of(context).bodyMedium.override(
+        font: GoogleFonts.inter(
+          fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+          fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+        ),
+        color: FlutterFlowTheme.of(context).error,
+        fontSize: 18.0,
+        letterSpacing: 0.0,
+        fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+        fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+      ),
+)
+// Generated code for this AppBar Widget...
+AppBar(
+  backgroundColor: FlutterFlowTheme.of(context).accent4,
+  iconTheme: IconThemeData(color: FlutterFlowTheme.of(context).primaryText),
+  automaticallyImplyLeading: true,
+  title: Text(
+    FFLocalizations.of(context).getText(
+      '0rsd07xx' /* Edit */,
+    ),
+    style: FlutterFlowTheme.of(context).headlineMedium.override(
+          font: GoogleFonts.inter(
+            fontWeight:
+                FlutterFlowTheme.of(context).headlineMedium.fontWeight,
+            fontStyle: FlutterFlowTheme.of(context).headlineMedium.fontStyle,
+          ),
+          color: FlutterFlowTheme.of(context).primaryText,
+          fontSize: 22.0,
+          letterSpacing: 0.0,
+          fontWeight: FlutterFlowTheme.of(context).headlineMedium.fontWeight,
+          fontStyle: FlutterFlowTheme.of(context).headlineMedium.fontStyle,
+        ),
+  ),
+  actions: [],
+  centerTitle: false,
+  elevation: 2.0,
+)
+// Generated code for this Text Widget...
+Text(
+  FFLocalizations.of(context).getText(
+    '0rsd07xx' /* Edit */,
+  ),
+  style: FlutterFlowTheme.of(context).headlineMedium.override(
+        font: GoogleFonts.inter(
+          fontWeight: FlutterFlowTheme.of(context).headlineMedium.fontWeight,
+          fontStyle: FlutterFlowTheme.of(context).headlineMedium.fontStyle,
+        ),
+        color: FlutterFlowTheme.of(context).primaryText,
+        fontSize: 22.0,
+        letterSpacing: 0.0,
+        fontWeight: FlutterFlowTheme.of(context).headlineMedium.fontWeight,
+        fontStyle: FlutterFlowTheme.of(context).headlineMedium.fontStyle,
+      ),
+)
