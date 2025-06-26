@@ -1,0 +1,379 @@
+﻿date,mood,amount,category
+Dec 31,happy,7.90,groceries  
+Dec 30,anxious,41.25,health  
+Dec 29,stressed,69.80,bills  
+Dec 28,calm,9.60,savings  
+Dec 27,sad,47.40,subscriptions  
+Dec 26,lonely,31.85,eating out  
+Dec 25,bored,26.45,shopping  
+Dec 24,excited,18.90,shopping  
+Dec 23,happy,6.55,groceries  
+Dec 22,anxious,38.95,health  
+Dec 21,stressed,70.50,health  
+Dec 20,calm,10.80,bills  
+Dec 19,bored,22.75,eating out  
+Dec 18,sad,49.30,subscriptions  
+Dec 17,lonely,32.60,eating out  
+Dec 16,happy,7.25,groceries  
+Dec 15,anxious,39.85,health  
+Dec 14,calm,9.10,savings  
+Dec 13,excited,20.40,shopping  
+Dec 12,bored,24.55,shopping  
+Dec 11,stressed,65.30,health  
+Dec 10,calm,10.05,bills  
+Dec 09,lonely,30.25,eating out  
+Dec 08,happy,6.85,groceries  
+Dec 07,sad,48.10,subscriptions  
+Dec 06,anxious,36.75,health  
+Dec 05,stressed,68.90,bills  
+Dec 04,bored,21.90,shopping  
+Dec 03,excited,17.75,shopping  
+Dec 02,happy,8.15,groceries  
+Dec 01,calm,10.20,savings  
+Nov 30,sad,50.60,health  
+Nov 29,anxious,40.50,eating out  
+Nov 28,stressed,66.40,health  
+Nov 27,bored,25.35,eating out  
+Nov 26,lonely,29.80,subscriptions  
+Nov 25,calm,8.95,bills  
+Nov 24,happy,7.10,groceries  
+Nov 23,excited,19.60,shopping  
+Nov 22,sad,52.20,health  
+Nov 21,anxious,37.95,health  
+Nov 20,stressed,70.70,bills  
+Nov 19,bored,23.60,shopping  
+Nov 18,calm,9.70,savings  
+Nov 17,lonely,34.45,eating out  
+Nov 16,happy,6.65,groceries  
+Nov 15,sad,46.25,subscriptions  
+Nov 14,anxious,42.30,health  
+Nov 13,bored,20.05,eating out  
+Nov 12,excited,22.15,shopping  
+Nov 11,stressed,67.90,health  
+Nov 19,happy,8.35,groceries  
+Nov 18,anxious,39.50,health  
+Nov 17,stressed,66.20,bills  
+Nov 16,calm,10.40,savings  
+Nov 15,sad,45.90,subscriptions  
+Nov 14,lonely,30.75,eating out  
+Nov 13,bored,26.60,shopping  
+Nov 12,excited,18.25,shopping  
+Nov 11,happy,6.95,groceries  
+Nov 10,anxious,37.80,health  
+Nov 09,stressed,70.10,health  
+Nov 08,calm,11.25,bills  
+Nov 07,bored,21.00,eating out  
+Nov 06,sad,49.75,subscriptions  
+Nov 05,lonely,33.20,eating out  
+Nov 04,happy,7.45,groceries  
+Nov 03,anxious,40.60,health  
+Nov 02,calm,9.30,savings  
+Nov 01,excited,17.50,shopping  
+Oct 31,bored,24.85,shopping  
+Oct 30,stressed,63.40,health  
+Oct 29,calm,10.10,bills  
+Oct 28,lonely,29.95,eating out  
+Oct 27,happy,6.80,groceries  
+Oct 26,sad,46.90,subscriptions  
+Oct 25,anxious,38.35,health  
+Oct 24,stressed,67.00,bills  
+Oct 23,bored,22.50,shopping  
+Oct 22,excited,19.75,shopping  
+Oct 21,happy,9.05,groceries  
+Oct 20,calm,10.75,savings  
+Oct 19,sad,50.20,health  
+Oct 18,anxious,42.10,eating out  
+Oct 17,stressed,64.90,health  
+Oct 16,bored,20.25,eating out  
+Oct 15,lonely,28.40,subscriptions  
+Oct 14,calm,8.95,bills  
+Oct 13,happy,7.15,groceries  
+Oct 12,excited,20.80,shopping  
+Oct 11,sad,51.35,health  
+Oct 10,anxious,36.95,health  
+Oct 09,stressed,69.20,bills  
+Oct 08,bored,23.75,shopping  
+Oct 07,calm,9.50,savings  
+Oct 06,lonely,34.10,eating out  
+Oct 05,happy,6.50,groceries  
+Oct 04,sad,48.40,subscriptions  
+Oct 03,anxious,39.60,health  
+Oct 02,bored,25.90,eating out  
+Oct 01,excited,21.25,shopping  
+Sep 30,stressed,68.30,health  
+Sep 29,excited,21.25,shopping  
+Sep 28,bored,25.90,eating out  
+Sep 27,anxious,39.60,health  
+Sep 26,sad,48.40,subscriptions  
+Sep 25,happy,6.50,groceries  
+Sep 24,lonely,34.10,eating out  
+Sep 23,calm,9.50,savings  
+Sep 22,bored,23.75,shopping  
+Sep 21,stressed,69.20,bills  
+Sep 20,anxious,36.95,health  
+Sep 19,sad,51.35,health  
+Sep 18,excited,20.80,shopping  
+Sep 17,happy,7.15,groceries  
+Sep 16,calm,8.95,bills  
+Sep 15,lonely,28.40,subscriptions  
+Sep 14,bored,20.25,eating out  
+Sep 13,stressed,64.90,health  
+Sep 12,anxious,42.10,eating out  
+Sep 11,sad,50.20,health  
+Sep 10,calm,10.75,savings  
+Sep 09,happy,9.05,groceries  
+Sep 08,excited,19.75,shopping  
+Sep 07,bored,22.50,shopping  
+Sep 06,stressed,67.00,bills  
+Sep 05,anxious,38.35,health  
+Sep 04,sad,46.90,subscriptions  
+Sep 03,happy,6.80,groceries  
+Sep 02,lonely,29.95,eating out  
+Sep 01,calm,10.10,bills  
+Aug 31,stressed,63.40,health  
+Aug 30,bored,24.85,shopping  
+Aug 29,excited,17.50,shopping  
+Aug 28,calm,9.30,savings  
+Aug 27,anxious,40.60,health  
+Aug 26,happy,7.45,groceries  
+Aug 25,lonely,33.20,eating out  
+Aug 24,sad,49.75,subscriptions  
+Aug 23,bored,21.00,eating out  
+Aug 22,calm,11.25,bills  
+Aug 21,stressed,70.10,health  
+Aug 20,anxious,37.80,health  
+Aug 19,happy,6.95,groceries  
+Aug 18,excited,18.25,shopping  
+Aug 17,bored,26.60,shopping  
+Aug 16,lonely,30.75,eating out  
+Aug 15,sad,45.90,subscriptions  
+Aug 14,calm,10.40,savings  
+Aug 13,stressed,66.20,bills  
+Aug 12,anxious,39.50,health  
+Aug 11,happy,8.35,groceries  
+Aug 08,stressed,68.40,health  
+Aug 07,excited,20.50,shopping  
+Aug 06,bored,24.10,eating out  
+Aug 05,anxious,39.90,health  
+Aug 04,sad,47.85,subscriptions  
+Aug 03,happy,7.55,groceries  
+Aug 02,lonely,35.40,eating out  
+Aug 01,calm,9.25,savings  
+Jul 31,bored,26.70,shopping  
+Jul 30,stressed,71.60,bills  
+Jul 29,anxious,36.45,health  
+Jul 28,sad,52.15,health  
+Jul 27,excited,21.00,shopping  
+Jul 26,happy,6.95,groceries  
+Jul 25,calm,8.75,bills  
+Jul 24,lonely,29.90,subscriptions  
+Jul 23,bored,20.50,eating out  
+Jul 22,stressed,64.70,health  
+Jul 21,anxious,40.25,eating out  
+Jul 20,sad,49.30,health  
+Jul 19,calm,10.60,savings  
+Jul 18,happy,9.85,groceries  
+Jul 17,excited,18.25,shopping  
+Jul 16,bored,23.10,shopping  
+Jul 15,stressed,69.50,bills  
+Jul 14,anxious,38.75,health  
+Jul 13,sad,45.99,subscriptions  
+Jul 12,happy,8.00,groceries  
+Jul 11,lonely,33.00,eating out  
+Jul 10,calm,11.10,bills  
+Jul 09,stressed,62.80,health  
+Jul 08,bored,25.25,shopping  
+Jul 07,excited,16.50,shopping  
+Jul 06,calm,9.35,savings  
+Jul 05,anxious,37.40,health  
+Jul 04,happy,7.75,groceries  
+Jul 03,lonely,30.90,eating out  
+Jul 02,sad,48.60,subscriptions  
+Jul 01,bored,22.00,eating out  
+Jun 30,calm,10.15,bills  
+Jun 29,stressed,70.50,health  
+Jun 28,anxious,39.25,health  
+Jun 27,happy,6.45,groceries  
+Jun 26,excited,19.99,shopping  
+Jun 25,bored,27.80,shopping  
+Jun 24,lonely,36.75,eating out  
+Jun 23,sad,44.20,subscriptions  
+Jun 22,calm,12.50,savings  
+Jun 21,stressed,67.30,bills  
+Jun 20,anxious,41.90,health  
+Jun 19,happy,8.75,groceries  
+Jun 19,anxious,45.00,shopping
+Jun 18,calm,15.25,groceries
+Jun 18,sad,60.00,shopping
+Jun 17,bored,22.00,entertainment
+Jun 17,happy,8.00,groceries
+Jun 16,stressed,75.00,shopping
+Jun 16,stressed,5.99,subscriptions
+Jun 15,lonely,38.50,eating out
+Jun 14,calm,12.00,savings
+Jun 13,anxious,49.99,eating out
+Jun 12,calm,10.00,bills
+Jun 11,anxious,55.20,shopping
+Jun 10,bored,32.00,entertainment
+Jun 09,lonely,19.99,subscriptions
+Jun 08,happy,7.50,groceries
+Jun 07,bored,40.00,eating out
+Jun 06,sad,62.00,shopping
+Jun 05,calm,14.00,groceries
+Jun 04,stressed,80.00,health
+Jun 03,calm,11.75,bills
+Jun 02,anxious,33.00,eating out
+Jun 01,happy,9.99,subscriptions
+May 31,calm,16.75,groceries
+May 30,lonely,47.50,shopping
+May 29,bored,28.00,entertainment
+May 28,calm,13.20,bills
+May 27,stressed,66.00,health
+May 26,sad,59.99,shopping
+May 25,excited,24.00,shopping
+May 24,bored,18.50,groceries
+May 23,anxious,73.00,eating out
+May 22,calm,12.00,savings
+May 21,happy,6.00,groceries
+May 20,bored,31.25,eating out
+May 19,anxious,39.90,shopping
+May 18,sad,58.00,shopping
+May 17,calm,11.50,groceries
+May 16,anxious,44.00,shopping
+May 15,happy,7.20,groceries
+May 14,bored,29.99,entertainment
+May 13,calm,14.00,bills
+May 12,stressed,67.00,eating out
+May 11,calm,9.99,subscriptions
+May 10,lonely,36.50,eating out
+May 09,calm,10.75,bills
+May 08,excited,19.00,shopping
+May 07,anxious,61.00,health
+May 06,sad,48.99,shopping
+May 05,happy,8.00,groceries
+May 04,bored,26.00,eating out
+May 03,anxious,42.00,shopping
+May 02,calm,13.50,savings
+May 01,bored,15.25,groceries
+Apr 30,stressed,70.00,health
+Apr 29,calm,12.00,bills
+Apr 28,happy,22.50,groceries
+Apr 27,anxious,55.00,health
+Apr 26,calm,8.75,bills
+Apr 25,lonely,31.99,shopping
+Apr 24,bored,44.20,eating out
+Apr 23,sad,10.00,subscriptions
+Apr 22,stressed,67.30,health
+Apr 21,excited,19.99,shopping
+Apr 20,happy,5.45,groceries
+Apr 19,anxious,38.00,eating out
+Apr 18,calm,9.50,savings
+Apr 17,stressed,72.00,bills
+Apr 16,sad,25.25,subscriptions
+Apr 15,excited,14.99,shopping
+Apr 14,lonely,40.00,eating out
+Apr 13,calm,6.60,bills
+Apr 12,bored,13.20,groceries
+Apr 11,happy,20.00,shopping
+Apr 10,stressed,60.45,health
+Apr 09,anxious,17.35,savings
+Apr 08,excited,11.99,shopping
+Apr 07,sad,47.30,health
+Apr 06,anxious,21.00,eating out
+Apr 05,bored,18.25,subscriptions
+Apr 04,happy,6.80,groceries
+Apr 03,stressed,68.90,bills
+Apr 02,calm,9.99,savings
+Apr 01,lonely,42.00,eating out
+Mar 31,calm,10.75,bills
+Mar 30,excited,29.95,shopping
+Mar 29,anxious,53.50,health
+Mar 28,happy,12.00,groceries
+Mar 27,stressed,75.25,health
+Mar 26,bored,34.00,eating out
+Mar 25,lonely,15.75,subscriptions
+Mar 24,sad,45.10,shopping
+Mar 23,calm,8.60,savings
+Mar 22,happy,19.99,groceries
+Mar 21,stressed,63.45,bills
+Mar 20,anxious,40.00,health
+Mar 19,calm,11.25,bills
+Mar 18,bored,28.50,eating out
+Mar 17,excited,17.35,shopping
+Mar 16,lonely,32.00,subscriptions
+Mar 15,sad,50.00,health
+Mar 14,happy,7.20,groceries
+Mar 13,anxious,39.80,eating out
+Mar 12,stressed,66.70,health
+Mar 11,calm,10.99,bills
+Mar 10,bored,16.25,groceries
+Mar 09,excited,23.50,shopping
+Mar 08,sad,48.90,subscriptions
+Mar 07,anxious,37.60,health
+Mar 06,happy,5.00,groceries
+Mar 05,lonely,31.45,eating out
+Mar 04,calm,13.10,savings
+Mar 03,stressed,70.25,bills
+Mar 02,bored,20.00,shopping
+Mar 01,excited,15.75,groceries
+Feb 29,anxious,43.00,health
+Feb 28,happy,9.25,subscriptions
+Feb 27,sad,51.30,eating out
+Feb 26,calm,7.95,bills
+Feb 25,bored,22.00,shopping
+Feb 24,lonely,29.60,eating out
+Feb 23,stressed,62.40,health
+Feb 22,excited,19.99,shopping
+Feb 21,happy,6.60,groceries
+Feb 20,anxious,35.00,health
+Feb 19,calm,10.50,savings
+Feb 18,sad,47.20,bills
+Feb 18,sad,52.10,bills
+Feb 17,happy,9.85,groceries
+Feb 16,anxious,40.00,health
+Feb 15,lonely,15.99,eating out
+Feb 14,excited,19.95,shopping
+Feb 13,stressed,63.40,health
+Feb 12,bored,24.25,eating out
+Feb 11,calm,8.60,savings
+Feb 10,sad,46.90,subscriptions
+Feb 09,happy,7.50,groceries
+Feb 08,anxious,39.75,health
+Feb 07,stressed,70.10,bills
+Feb 06,excited,18.00,shopping
+Feb 05,lonely,35.99,eating out
+Feb 04,calm,9.45,bills
+Feb 03,happy,6.80,groceries
+Feb 02,sad,48.20,subscriptions
+Feb 01,bored,27.00,eating out
+Jan 31,stressed,65.00,health
+Jan 30,calm,11.25,savings
+Jan 29,anxious,42.50,health
+Jan 28,happy,10.00,groceries
+Jan 27,lonely,32.45,eating out
+Jan 26,sad,45.60,shopping
+Jan 25,bored,20.15,subscriptions
+Jan 24,excited,13.75,shopping
+Jan 23,anxious,38.00,health
+Jan 22,calm,7.80,bills
+Jan 21,stressed,66.90,health
+Jan 20,happy,9.95,groceries
+Jan 19,sad,50.30,subscriptions
+Jan 18,lonely,30.50,eating out
+Jan 17,excited,17.25,shopping
+Jan 16,bored,14.10,groceries
+Jan 15,calm,8.30,savings
+Jan 14,anxious,36.40,health
+Jan 13,happy,6.99,groceries
+Jan 12,stressed,70.85,bills
+Jan 11,sad,22.00,subscriptions
+Jan 10,bored,19.25,eating out
+Jan 09,excited,15.75,shopping
+Jan 08,calm,9.99,bills
+Jan 07,lonely,33.20,eating out
+Jan 06,anxious,41.50,health
+Jan 05,happy,7.60,groceries
+Jan 04,stressed,64.30,health
+Jan 03,sad,46.75,bills
+Jan 02,calm,10.25,savings
+Jan 01,bored,18.90,shopping
