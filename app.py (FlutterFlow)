@@ -1,17 +1,9 @@
-
+Format of frontend side:
 Loging and onboarding (page: login)
-
 Home screen (page: initial)
-
-
 Log a new transaction (Page: createExpense)
-
 Edit logged transaction (Page: editExpensve)
-
 View mood & spending stats (Page: report)
-
 Mood-spend dashboard (Page: dashboarding)
-
 Account settings (Page: settings)
-
 Search Your History (Page: search function)
