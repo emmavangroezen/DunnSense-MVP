@@ -5,7 +5,7 @@ Welcome to DunnSense! A FinTech app that bridges emotional intelligence and fina
 
 The app of DunnSense revolves around the idea that users are able to log transactions that have taken place with associated moods and timestamps. These inputs will then be visualised in emotional spending patterns based on machine learning algorithms with increasing financial well-being with real-life nudges based on history of transactions. Within the app, it will also be possible to see potential future spending patterns and mood predictions based in the inputted history, where the app will prepare for a future where mood-based financial recommendations will be prompted. 
 
-Currently, the backend handles the data ingestion and Machine Learning Modelling (ML) while the frontend (build in FlutterFlow) is in place for UI/UX demonstration and app creation. The API connection has not yet been implemented due to software skills limitation (of myself) but the API connection is a plannend enhancement. 
+Currently, the backend handles the data ingestion and Machine Learning Modelling (ML) while the frontend (build in FlutterFlow) is in place for UI/UX demonstration and app creation. The API connection has not yet been implemented due to software skills limitation (of myself) but the API connection is a planned enhancement. 
 
 **So what includes the tech stacks & features?**
 **- Frontend (Prototype via Flutterflow)**
@@ -14,13 +14,13 @@ See the following link to view app within FLutterflow: https://app.flutterflow.i
 The frontend of the app provies a clean UI/UX for user interaction, combined with UX. The input is gathered and is used for logging transactions and moods, while visual placeholders are included for emotion analytics and recommendations. Here, ideally, the app also provides the nudges after the input of a transaction, but will also be futher included in the growth strategy of this business.
 
 **- Backend (Working MVP)**
-Python has been used to code the backend side of DunnSense (within Jupiter notebook) where the Machine Learning for emotion-based financial insights was also placed.
+Python has been used to code the backend side of DunnSense (within Jupyter notebook) where the Machine Learning for emotion-based financial insights was also placed.
 
-Faker was used to create synthetic transaction and mood data generation of a potential user of the previous year. This was required in order to create the ML models and test the potential predictions and nudges the model creates. The syntehic data was generated with the "Faker" library of Python, which included transaction amounts, mood tages (e.g. Happy, Stressed, Neutral), and with timestamps. This information was saved as a CSV file due to convenience, and has been added within this repository for acces. With the models including:
+Faker was used to create synthetic transaction and mood data generation of a potential user of the previous year. This was required in order to create the ML models and test the potential predictions and nudges the model creates. The synthetic data was generated with the "Faker" library of Python, which included transaction amounts, mood tages (e.g. Happy, Stressed, Neutral), and with timestamps. This information was saved as a CSV file due to convenience, and has been added within this repository for acces. With the models including:
 1. ARIMA: mood forecasting
 2. Random forest: mood classification
 3. Isolation forest: anomaly detection
-4. random forest (probalistic): impulse risk scoring
+4. random forest (probabilistic): impulse risk scoring
 After this visualisations from plotly the outputs include nudges, insights and CSV logs.
 
 REST APIs need to be developed and documented, while also needed to be connected to the frontend side of this MVP. Again due to skills limitations, this was not possible. 
@@ -30,7 +30,7 @@ REST APIs need to be developed and documented, while also needed to be connected
 The frontend of DunnSense is built using FlutterFlow, providing an intuitive and emotionally-aware user journey from onboarding to behavior-aware insights. Below is a breakdwon of the user interface per page (here, page represent the individual pages the user go through during their User Experience (UX)) and how the app currenlty works:
 
 Loging and onboarding (page: login)
-On first launch, the user lands on the authentication screen. Here options include, create a new account via email + password + confirmation, continue seamlessly with Google sign-in, and existing users can log in directly. This ensures a secure and scalable onboarding process.
+On first launch, the user lands on the authentication screen. Here options include, create a new account via email + password + confirmation, continue seamlessly with Google sign-in, and excisting users can log in directly. This ensures a secure and scalable onboarding process.
 
 Home screen (page: initial)
 After logging in, users arrive on the home dashboard, which displays:
@@ -70,7 +70,7 @@ Summary of workflow:
 The frontend UI/UX guides the user through a complete emotional-financial loop: logging --> reflection --> insight --> prediction --> adjustment. Where each page supports personal agency and behavior coaching, ensuring a smooth bridge to backend analytics and nudging engine.
 
 **Backend**
-The code is developed in the language of Python and was implemented via a notebook in the software Jupiter. The code is devided within clear steps.
+The code is developed in the language of Python and was implemented via a notebook in the software Jupyter. The code is devided within clear steps.
 
 Step 1: introduction
 Introduces the app's purpose: helping users understand how their mood influences their spending and offering behaviorally intelligent nudges
@@ -108,7 +108,7 @@ pip install notebook
 pip install ipywidgets pandas plotly statsmodels scikit-learn
 
 4. run the notebook
-jypter notebook (within terminal), then open the notebook file (DunnSense_MVP and attached to this repository) and running the cells in order as displayed (Shift+Enter).
+Jupyter notebook (within terminal), then open the notebook file (DunnSense_MVP and attached to this repository) and running the cells in order as displayed (Shift+Enter).
 
 **Small notes for users:**
 The backend size of the app runs entirely in Jupyter Notebook, which is ideal for the demo and prototyping. No database or API connection is currently required for the MVP since the data is all simulated using faker or manual input. 
